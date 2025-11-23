@@ -12,8 +12,8 @@ from sklearn.decomposition import PCA
 # Load models
 @st.cache_resource
 def load_models():
-    leaf_detector = tf.keras.models.load_model('models\leaf_detector.keras', custom_objects={'KerasLayer': hub.KerasLayer})
-    species_classifier = tf.keras.models.load_model('models\species_classifier.keras')
+    leaf_detector = tf.keras.models.load_model('.\models\leaf_detector.keras', custom_objects={'KerasLayer': hub.KerasLayer})
+    species_classifier = tf.keras.models.load_model('.\models\species_classifier.keras')
     return leaf_detector, species_classifier
 
 def preprocess_image(image):
@@ -255,4 +255,5 @@ if uploaded_file is not None:
                 st.code(traceback.format_exc())
         else:
             st.error("This is not a leaf.")
+
 
