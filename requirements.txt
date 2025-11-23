@@ -5,6 +5,4 @@ pillow
 numpy
 matplotlib
 scikit-learn
-opencv-python
-libgl1
-libglib2.0-0
+opencv-python-headless
